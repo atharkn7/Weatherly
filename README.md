@@ -1,7 +1,6 @@
 # Weather Data Website
 
-A lightweight web application built with Vanilla JavaScript to practice fetching and displaying weather data from the OpenWeatherMap API
-.
+A lightweight web application built with **Vanilla JavaScript** and styled using **Bootstrap**. This project practices fetching and displaying real-time weather data from the **OpenWeatherMap API**.
 
 ## Goal
 
@@ -13,6 +12,13 @@ A lightweight web application built with Vanilla JavaScript to practice fetching
 - Fetches live weather data for any city.
 - Displays temperature, weather conditions, and related information.
 - Simple, responsive interface using HTML, CSS, and JavaScript.
+
+## Tech Stack
+
+- HTML5
+- CSS3 (with Bootstrap)
+- JavaScript (Vanilla JS)
+- OpenWeatherMap API
 
 ## Future Improvements
 - Add search history and local storage support.
