@@ -9,3 +9,8 @@ https://restcountries.com/
 /* For cities using country codes from above API
 https://rapidapi.com/wirefreethought/api/geodb-cities
 */
+
+/* 
+- Disable relevant input fields (enable city after country and disable search until end)
+- ° <-- symbol
+*/
