@@ -1,0 +1,39 @@
+/* Light shadow for dark background */
+.shadow-light {
+    box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Subtle card styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15);
+}
+
+/* Form input style for dark mode */
+input.form-control {
+    background-color: #222;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+input.form-control:focus {
+    background-color: #1a1a1a;
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+    color: white;
+}
+
+/* Add slight contrast to the left column */
+form {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.05);
+}

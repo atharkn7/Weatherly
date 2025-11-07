@@ -14,90 +14,96 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <!-- Local Code -->
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-dark text-white p-3">
 
     <div class="container">
-        <h3 class="text-end">Welcome to... <strong>Weatherly</strong></h3>
-        <hr>
+        <h3 class="text-end mb-3">Welcome to... <strong class="text-info">Weatherly</strong></h3>
+        <hr class="border border-secondary">
+
         <div class="container">
-            <div class="row border" style="height: 75vh;">
-                <div class="col border d-flex justify-content-center align-items-center flex-column">
-                    <h4>Search place... </h4>
+            <div class="row d-flex align-items-center" style="height: 75vh;">
+
+                <!-- LEFT COLUMN -->
+                <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
+                    <h4 class="mb-3">Search place...</h4>
                     <form style="min-width: 80%;">
-                        <hr class="border">
-
                         <div class="mb-3">
-                            <label for="city" class="form-label text-end">City</label>
-                            <input type="text" class="form-control" id="city">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter city name">
                         </div>
-                        <hr class="border mt-5">
-                        <button type="submit" class="btn btn-secondary">Search</button>
-
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-info px-4">Search</button>
+                        </div>
                     </form>
                 </div>
-                <div class="col border d-flex justify-content-center align-items-center flex-column">
+
+                <!-- RIGHT COLUMN -->
+                <div
+                    class="col-md-7 d-flex justify-content-center align-items-center flex-column shadow-light p-4 bg-dark rounded">
                     <div class="text-center" style="min-width: 80%;">
-                        <h5 id="city_heading">London</h5>
-                        <h1 id="temp">-</h1>
-                        <p>Feels like <strong id="feels_like">-</strong></p>
+                        <h5 id="city_heading" class="text-info">London</h5>
+                        <h1 id="temp" class="display-4 fw-bold">-</h1>
+                        <p class="text-secondary">Feels like <strong id="feels_like">-</strong></p>
                     </div>
-                    <hr class="border" style="width: 80%;">
-                    <!-- TEST -->
-                    <div class="container-fluid px-5 gap-2 text-center">
+
+                    <hr class="border border-secondary" style="width: 80%;">
+
+                    <div class="container-fluid px-3 text-center">
                         <!-- First Row -->
-                        <div class="row gap-2 ">
-                            <div class="col card shadow-sm">
+                        <div class="row g-2 mb-2 gap-2">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Min</h6>
-                                    <p class="mb-0" id="temp_min">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Min</h6>
+                                    <p id="temp_min">-</p>
                                 </div>
                             </div>
-                            <div class="col card shadow-sm">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Max</h6>
-                                    <p class="mb-0" id="temp_max">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Max</h6>
+                                    <p id="temp_max">-</p>
                                 </div>
                             </div>
-                            <div class="col card shadow-sm">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Pressure</h6>
-                                    <p class="mb-0" id="pressure">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Pressure</h6>
+                                    <p id="pressure">-</p>
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <!-- 2nd Row -->
-                        <div class="row gap-2">
-                            <div class="col card shadow-sm">
+
+                        <!-- Second Row -->
+                        <div class="row g-2 gap-2">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Humidity</h6>
-                                    <p class="mb-0" id="humidity">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Humidity</h6>
+                                    <p id="humidity">-</p>
                                 </div>
                             </div>
-                            <div class="col card shadow-sm">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Wind Speed</h6>
-                                    <p class="mb-0" id="wind_speed">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Wind Speed</h6>
+                                    <p id="wind_speed">-</p>
                                 </div>
                             </div>
-                            <div class="col card shadow-sm">
+                            <div class="col card">
                                 <div class="card-body">
-                                    <h6 class="text-secondary text-uppercase small mb-2">Weather</h6>
-                                    <p class="mb-0" id="description">-</p>
+                                    <h6 class="text-secondary text-uppercase small mb-1">Weather</h6>
+                                    <p id="description">-</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
-
                 </div>
-            </div>
 
+            </div>
         </div>
+    </div>
 
 </body>
 
