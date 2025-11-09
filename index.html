@@ -22,7 +22,7 @@
 <body data-bs-theme="dark" class="p-3">
 
     <div class="container">
-        <h3 class="text-end mb-3">Welcome to... <strong class="text-info">Weatherly</strong></h3>
+        <h3 class="text-end mb-3">Welcome to... <strong class="text-warning">Weatherly</strong></h3>
         <hr class="border border-secondary">
 
         <div class="container">
@@ -35,9 +35,10 @@
                         <div class="mb-3">
                             <label for="city" class="form-label">City</label>
                             <input type="text" class="form-control" id="city" placeholder="Enter city name">
+                            <p id="tester"></p>
                         </div>
                         <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-info px-4">Search</button>
+                            <button type="submit" class="btn btn-warning px-4">Search</button>
                         </div>
                     </form>
                 </div>
@@ -46,7 +47,7 @@
                 <div
                     class="col-md-7 d-flex justify-content-center align-items-center flex-column shadow-light p-4 bg-dark rounded">
                     <div class="text-center" style="min-width: 80%;">
-                        <h5 id="city_heading" class="text-info">London</h5>
+                        <h5 id="city_heading" class="text-warning">London</h5>
                         <h1 id="temp" class="display-4 fw-bold">-</h1>
                         <p class="text-secondary">Feels like <strong id="feels_like">-</strong></p>
                     </div>
