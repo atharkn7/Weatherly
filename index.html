@@ -33,12 +33,19 @@
                     <h4 class="mb-3">Search place...</h4>
                     <form style="min-width: 80%;">
                         <div class="mb-3">
+                            <div id="alert-container"></div>
                             <label for="city" class="form-label">City</label>
                             <input type="text" class="form-control" id="city" placeholder="Enter city name">
                             <p id="tester"></p>
+                            <p id="error" class="text-warning text-center p-1"></p>
+                            <!-- ERROR -->
+
+
                         </div>
+                        <!-- BUTTONS -->
                         <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-warning px-4">Search</button>
+                            <button id="submit" type="submit" class="btn btn-warning px-4">Search</button>
+                            <button id="reset" type="reset" class="btn btn-secondary px-4">Clear</button>
                         </div>
                     </form>
                 </div>
