@@ -22,7 +22,7 @@ let debounceTimer;
 
 // HTML Elements (Created)
 let elements = {
-    cityName: undefined,
+    cityHeading: undefined,
     temp: undefined,
     feelsLike: undefined,
     // Grid Elements
@@ -72,8 +72,6 @@ function autocomplete() {
 }
 
 
-
-
 // Gets Weather Data
 function current_weather() {
     const city_name = city.value.trim();
@@ -93,17 +91,17 @@ function current_weather() {
         .then(response => response.json())
         .then(data => {
             // Updating HTML
-            document.querySelector('#city_heading').innerHTML = city_name.toUpperCase();
-            document.querySelector('#temp').innerHTML = `${data.main.temp.toFixed(0)}°`;
-            document.querySelector('#feels_like').innerHTML = `${data.main.feels_like.toFixed(0)}°`;
+            elements.cityHeading.innerHTML = city_name.toUpperCase();
+            elements.temp.innerHTML = `${data.main.temp.toFixed(0)}°`;
+            elements.feelsLike.innerHTML = `${data.main.feels_like.toFixed(0)}°`;
 
             // Grid values
-            document.querySelector('#temp_min').innerHTML = `${data.main.temp_min.toFixed(0)}`;
-            document.querySelector('#temp_max').innerHTML = `${data.main.temp_max.toFixed(0)}`;
-            document.querySelector('#pressure').innerHTML = data.main.pressure;
-            document.querySelector('#humidity').innerHTML = data.main.humidity;
-            document.querySelector('#wind_speed').innerHTML = data.wind.speed;
-            document.querySelector('#description').innerHTML = data.weather[0].description.toUpperCase();;
+            elements.minTemp.innerHTML = `${data.main.temp_min.toFixed(0)}`;
+            elements.maxTemp.innerHTML = `${data.main.temp_max.toFixed(0)}`;
+            elements.pressure.innerHTML = data.main.pressure;
+            elements.humidity.innerHTML = data.main.humidity;
+            elements.windSpeed.innerHTML = data.wind.speed;
+            elements.description.innerHTML = data.weather[0].description.toUpperCase();;
 
             // Checking
             console.log(`Temp: ${data.main.temp}`);
@@ -112,8 +110,6 @@ function current_weather() {
             clearUI();
             alert();
             console.error(error);
-
-
         })
 }
 
@@ -124,6 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
     search = document.querySelector('#submit');
     city = document.querySelector('#city');
     const resetBtn = document.getElementById('reset');
+
+    // Assigning HTML elements to elements object
+    elements.cityHeading = document.querySelector('#city_heading');
+    elements.temp = document.querySelector('#temp');
+    elements.feelsLike = document.querySelector('#feels_like');
+
+    elements.minTemp = document.querySelector('#temp_min');
+    elements.maxTemp = document.querySelector('#temp_max');
+    elements.pressure = document.querySelector('#pressure');
+    elements.humidity = document.querySelector('#humidity');
+    elements.windSpeed = document.querySelector('#wind_speed');
+    elements.description = document.querySelector('#description');
 
     // Attach the click event listener
     resetBtn.addEventListener('click', () => {
